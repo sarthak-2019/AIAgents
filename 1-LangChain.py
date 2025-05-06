@@ -1,6 +1,5 @@
 import os
 from dotenv import load_dotenv
-from getpass import getpass
 from langchain_openai import ChatOpenAI
 from help import article
 from langchain.prompts import SystemMessagePromptTemplate, HumanMessagePromptTemplate, ChatPromptTemplate
@@ -11,7 +10,6 @@ from langchain_core.runnables import RunnableLambda
 from langchain_community.utilities.dalle_image_generator import DallEAPIWrapper
 from langchain_core.prompts import PromptTemplate
 load_dotenv()
-
 
 # Set your OpenAI API key as an environment variable
 os.environ["OPENAI_API_KEY"] = os.environ.get('OPENAI_API_KEY')
