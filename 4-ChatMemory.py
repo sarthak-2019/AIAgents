@@ -364,7 +364,8 @@ class ConversationSummaryBufferMessageHistory(BaseChatMessageHistory, BaseModel)
             SystemMessagePromptTemplate.from_template(
                 "Given the existing conversation summary and the new messages, "
                 "generate a new summary of the conversation. Ensuring to maintain "
-                "as much relevant information as possible."
+                "as much relevant information as possible. However we want to keep the conversation short and concise."
+                "the limmit is single short paragraph"
             ),
             HumanMessagePromptTemplate.from_template(
                 "Existing conversation summary:\n{existing_summary}\n\n"
